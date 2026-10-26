@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Findchisee - Temukan franchise yang pas dengan modalmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Findchisee</a>
+      <nav class="nav" aria-label="Menu utama">
+        <a href="index.html#franchise">Franchise</a>
+        <a class="btn btn-outline" href="register.html?peran=franchisor">Daftarkan brand</a>
+        <span id="nav-auth"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Cari franchise yang pas dengan modalmu</h1>
+        <p class="hero-sub">Bandingkan modal awal, waktu balik modal, dan jumlah outlet dari berbagai brand di satu tempat.</p>
+
+        <form class="filters" id="filter-form" aria-label="Filter franchise">
+          <div class="field field-wide">
+            <label for="cari">Nama brand</label>
+            <input type="search" id="cari" placeholder="Contoh: kopi">
+          </div>
+          <div class="field">
+            <label for="model">Model bisnis</label>
+            <select id="model"></select>
+          </div>
+          <div class="field">
+            <label for="modal">Modal maksimal</label>
+            <select id="modal"></select>
+          </div>
+        </form>
+
+        <div class="chips" id="chips" role="group" aria-label="Kategori"></div>
+      </div>
+    </section>
+
+    <section class="section" id="franchise">
+      <div class="container">
+        <div class="section-head">
+          <h2>Franchise yang tersedia</h2>
+          <p class="result-count" id="jumlah-hasil" aria-live="polite"></p>
+        </div>
+        <div class="grid" id="daftar-merchant"></div>
+        <p class="empty" id="kosong" hidden>Belum ada franchise yang cocok. Naikkan modal maksimal atau pilih kategori lain.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Findchisee</p>
+      <p>Platform contoh untuk tugas kuliah E-Commerce dan Cloud System. Semua data brand di halaman ini fiktif.</p>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

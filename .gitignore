@@ -1,0 +1,17 @@
+# Environment dan rahasia
+.env
+.env.*
+!.env.example
+
+# Dependency dan cache
+node_modules/
+vendor/
+*.log
+
+# File sistem
+.DS_Store
+Thumbs.db
+
+# Backup database dan file sementara
+*.sql
+*.zip

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Akun - Findchisee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-auth">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Findchisee</a>
+      <nav class="nav" aria-label="Menu utama">
+        <a href="index.html#franchise">Franchise</a>
+        <span id="nav-auth"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-shell">
+    <aside class="auth-panel">
+      <p class="eyebrow">Mulai perjalanan franchise Anda</p>
+      <h1>Satu akun untuk membandingkan ratusan brand.</h1>
+      <ul class="auth-list">
+        <li>Bandingkan modal awal, balik modal, dan jumlah outlet.</li>
+        <li>Simpan brand favorit sebelum menghubungi franchisor.</li>
+        <li>Franchisor dapat memantau status verifikasi brand.</li>
+      </ul>
+      <p class="auth-note">Data akun pada versi demo ini hanya tersimpan di browser Anda.</p>
+    </aside>
+
+    <section class="auth-form-wrap">
+      <div class="auth-card">
+        <h2>Daftar akun</h2>
+        <p class="auth-desc">Sudah punya akun? <a class="link" href="login.html">Masuk di sini</a>.</p>
+
+        <p class="alert" id="pesan" hidden></p>
+
+        <form id="form-register" novalidate>
+          <div class="field">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" autocomplete="name" placeholder="Contoh: Andi Pratama">
+            <p class="field-error" id="nama-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@email.com">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" autocomplete="new-password" placeholder="Minimal 8 karakter">
+              <p class="hint">Gunakan minimal 8 karakter dengan kombinasi huruf dan angka.</p>
+              <p class="field-error" id="password-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="konfirmasi">Konfirmasi password</label>
+              <input type="password" id="konfirmasi" name="konfirmasi" autocomplete="new-password" placeholder="Ulangi password">
+              <p class="field-error" id="konfirmasi-error" hidden></p>
+            </div>
+          </div>
+
+          <fieldset class="radio-group">
+            <legend>Jenis akun</legend>
+            <label class="radio-card">
+              <input type="radio" name="role" value="franchisee" checked>
+              <span>
+                <strong>Calon franchisee</strong>
+                <small>Saya ingin mencari dan membeli franchise.</small>
+              </span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="role" value="franchisor">
+              <span>
+                <strong>Pemilik franchise</strong>
+                <small>Saya ingin mendaftarkan brand saya. Perlu verifikasi admin.</small>
+              </span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-solid btn-block" id="tombol-daftar">Buat akun</button>
+        </form>
+
+        <p class="auth-foot">
+          Catatan: versi demo ini hanya memakai HTML, CSS, dan JavaScript di sisi browser.
+          Autentikasi belum terhubung ke backend sehingga belum aman untuk produksi.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Findchisee</p>
+      <p>Platform contoh untuk tugas kuliah E-Commerce dan Cloud System. Semua data brand di halaman ini fiktif.</p>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>

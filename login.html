@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk - Findchisee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-auth">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Findchisee</a>
+      <nav class="nav" aria-label="Menu utama">
+        <a href="index.html#franchise">Franchise</a>
+        <a class="btn btn-outline" href="register.html">Daftar</a>
+        <span id="nav-auth"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-shell">
+    <aside class="auth-panel">
+      <p class="eyebrow">Selamat datang kembali</p>
+      <h1>Lanjutkan rencana franchise Anda.</h1>
+      <ul class="auth-list">
+        <li>Dashboard ringkas sesuai peran akun Anda.</li>
+        <li>Pantau status pengelolaan brand untuk franchisor.</li>
+        <li>Kelola pengguna untuk admin Findchisee.</li>
+      </ul>
+      <p class="auth-note">Versi demo: sesi disimpan sementara di tab browser ini saja.</p>
+    </aside>
+
+    <section class="auth-form-wrap">
+      <div class="auth-card">
+        <h2>Masuk ke Findchisee</h2>
+        <p class="auth-desc">Belum punya akun? <a class="link" href="register.html">Daftar sekarang</a>.</p>
+
+        <p class="alert" id="pesan" hidden></p>
+
+        <form id="form-login" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@email.com">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Password Anda">
+            <p class="field-error" id="password-error" hidden></p>
+          </div>
+
+          <button type="submit" class="btn btn-solid btn-block" id="tombol-masuk">Masuk</button>
+        </form>
+
+        <details class="setup-admin" id="setup-admin" hidden>
+          <summary>Belum ada akun admin? Buat admin pertama</summary>
+          <p class="hint">
+            Blok ini hanya muncul selama belum ada akun admin sama sekali. Peran admin tidak bisa
+            dipilih lewat form registrasi biasa, dan tidak ada kredensial admin tetap di dalam kode ini.
+          </p>
+          <form id="form-admin" novalidate>
+            <div class="field">
+              <label for="admin-nama">Nama lengkap admin</label>
+              <input type="text" id="admin-nama" autocomplete="name" placeholder="Nama pengelola">
+              <p class="field-error" id="admin-nama-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="admin-email">Email admin</label>
+              <input type="email" id="admin-email" autocomplete="email" placeholder="admin@email.com">
+              <p class="field-error" id="admin-email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="admin-password">Password admin</label>
+              <input type="password" id="admin-password" autocomplete="new-password" placeholder="Minimal 8 karakter">
+              <p class="field-error" id="admin-password-error" hidden></p>
+            </div>
+            <button type="submit" class="btn btn-outline btn-block" id="tombol-admin">Buat akun admin</button>
+          </form>
+        </details>
+
+        <p class="auth-foot">
+          Catatan: halaman ini hanya memakai JavaScript di sisi browser. Di produksi, proses masuk wajib
+          lewat backend atau layanan autentikasi agar aman.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Findchisee</p>
+      <p>Platform contoh untuk tugas kuliah E-Commerce dan Cloud System. Semua data brand di halaman ini fiktif.</p>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>
